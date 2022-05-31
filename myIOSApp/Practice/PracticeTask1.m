@@ -23,7 +23,7 @@
     // 3. save json string into a file
     NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentPatch = [pathArray firstObject];
-    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *filePath = [documentPatch stringByAppendingPathComponent:@"userinfo.txt"];
     [fileManager createFileAtPath:filePath contents:jsonData attributes:nil];
     NSLog(@"3.save the string into the json file successfully");
