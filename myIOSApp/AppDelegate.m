@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "webbrowser/WebbrowserViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,7 +16,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    if (@available(iOS 13.0, *)) {
+      
+    } else {
+        self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+        
+        UITabBarController *tabBarController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateInitialViewController];
+        
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+        
+        self.window.rootViewController = navigationController;
+        [self.window makeKeyAndVisible];
+    }
+
     return YES;
 }
 
