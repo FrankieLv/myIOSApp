@@ -11,11 +11,12 @@ myIOSApp Practice: "webbrowser", "demo 2"(pending), "demo 3"(pending) ...
 
 # Demo 1 - Webbrowser
 + WebbrowserViewController: It's first tab view of tabbar.
-  - URL UITextField: WebbrowserViewController is set as the delegate for it.
+  - URL UITextField: The WebbrowserViewController is set as the delegate for it.
   - Go Button: It's used to trigger the http request per the URL. Another way is to implement the method "textFieldShouldReturn" of the URL UITextField delegate to trigger the http request per the URL value.
   - WKWebview: it's used to load the page with the http url of url textfield.
   - UIProgressView + (WKWebview: addObserver): To display the http load progress on the  page.
   - UITableView: To implement the autocomplete text in the URL text field.
     * pastUrls: Any new url will be added into by clicking the "return" keyword in the keyboard or click "Go" button.
     * autocompleteUrls: Any change in the URL Textfield will find the matched the past url and add this past URL into the autocompleteUrls, then the UITableView is to reload it to display all the possible autocomplete urls on the page for user. A http request wil be sent to load the page per the selected url in the UITableView. The UITableView should never be displayed on the page(autCompleteUrls is empty) at the beginning since user has no any post url yet.
+    * datasource/delegate: The WebbrowserViewController is set as the delegate for it.
  # Demo 2 - Pending
