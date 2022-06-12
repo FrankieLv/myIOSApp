@@ -1,5 +1,7 @@
 # myIOSApp
 IOS APP Practice
+A TabBar is used to manage all the demos in each tab.
+
 1. UIWindow -> UINavigationController -> UITabBarViewController -> WebbrowserViewController / ViewController2 / ViewController3 ...
 myIOSApp Practice: "webbrowser", "demo 2"(pending), "demo 3"(pending) ...
 
@@ -22,3 +24,4 @@ User can input the url in the UITextField and WKWebView can load the website per
     * autocompleteUrls: Any change in the URL Textfield will try to match the past url and add this past URL into the autocompleteUrls, then the UITableView is to reload it to display all the available autocomplete urls on the page for user. If user selects a specific url in the UITableView, A http request wil be sent to load the page per the selected url. The UITableView should never be displayed on the page(autCompleteUrls is empty) at the beginning since user has no any post url yet.
     * datasource/delegate: The WebbrowserViewController is set as the delegate for it.
  # Demo 2 - Pending
+ # Demo 3 - ...
