@@ -11,7 +11,7 @@ myIOSApp Practice: "webbrowser", "demo 2"(pending), "demo 3"(pending) ...
 4. No demo of UINavigationController yet. It's been prepared for the future demo.
 
 # Demo 1 - Webbrowser
-User can input the url in the UITextField and WKWebView can load the website.
+User can input the url in the UITextField and WKWebView can load the website per the url
 + WebbrowserViewController:
   - URL UITextField: The WebbrowserViewController is set as the delegate for it.
   - Go Button: It's used to trigger the http request per the URL. Another way is to implement the method "textFieldShouldReturn" of the URL UITextField delegate to trigger the http request per the URL value.
