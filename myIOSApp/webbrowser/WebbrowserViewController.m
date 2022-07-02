@@ -64,6 +64,9 @@
       }
 
     [self.autocompleteTableView reloadData];
+    CGRect frame = self.autocompleteTableView.frame;
+    frame.size.height = self.autocompleteTableView.contentSize.height;
+    self.autocompleteTableView.frame = frame;
 }
   
 

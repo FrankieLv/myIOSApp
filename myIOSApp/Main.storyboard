@@ -36,16 +36,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-6y-QHg">
-                                <rect key="frame" x="21" y="60" width="331" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-6y-QHg">
+                                <rect key="frame" x="15" y="54" width="349" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="URL"/>
                                 <imageReference key="background" image="arrowshape.turn.up.forward.fill" catalog="system" symbolScale="default"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRf-12-qAZ">
-                                <rect key="frame" x="351" y="56" width="46" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRf-12-qAZ">
+                                <rect key="frame" x="379" y="54" width="30" height="30"/>
                                 <state key="normal" title="Go">
                                     <color key="titleColor" systemColor="secondaryLabelColor"/>
                                     <color key="titleShadowColor" systemColor="systemBackgroundColor"/>
@@ -54,21 +52,19 @@
                                     <action selector="go:" destination="kMg-9V-dUb" eventType="touchUpInside" id="MIc-vE-f0g"/>
                                 </connections>
                             </button>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xeu-ha-Ed5">
-                                <rect key="frame" x="0.0" y="113" width="414" height="700"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xeu-ha-Ed5">
+                                <rect key="frame" x="0.0" y="103" width="414" height="710"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kQp-oC-AhL">
-                                <rect key="frame" x="0.0" y="113" width="414" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kQp-oC-AhL">
+                                <rect key="frame" x="0.0" y="94" width="414" height="4"/>
                             </progressView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-Hi-RMT">
-                                <rect key="frame" x="21" y="102" width="332" height="138"/>
+                                <rect key="frame" x="15" y="94" width="349" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,6 +72,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YRa-cE-k0m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cTI-6y-QHg" firstAttribute="leading" secondItem="YRa-cE-k0m" secondAttribute="leading" constant="15" id="1R6-d3-cZx"/>
+                            <constraint firstItem="YRa-cE-k0m" firstAttribute="trailing" secondItem="cTI-6y-QHg" secondAttribute="trailing" constant="50" id="6z6-LN-0jH"/>
+                            <constraint firstItem="kQp-oC-AhL" firstAttribute="leading" secondItem="YRa-cE-k0m" secondAttribute="leading" priority="750" id="7kr-QL-cEG"/>
+                            <constraint firstItem="Xeu-ha-Ed5" firstAttribute="trailing" secondItem="YRa-cE-k0m" secondAttribute="trailing" id="AGB-jA-fbo"/>
+                            <constraint firstItem="Xeu-ha-Ed5" firstAttribute="top" secondItem="cTI-6y-QHg" secondAttribute="bottom" constant="15" id="F8d-3S-Rdx"/>
+                            <constraint firstItem="YRa-cE-k0m" firstAttribute="trailing" secondItem="eRf-12-qAZ" secondAttribute="trailing" constant="5" id="Fws-iz-JNx"/>
+                            <constraint firstItem="kQp-oC-AhL" firstAttribute="trailing" secondItem="YRa-cE-k0m" secondAttribute="trailing" priority="750" id="M0L-Cn-zNg"/>
+                            <constraint firstItem="cTI-6y-QHg" firstAttribute="top" secondItem="YRa-cE-k0m" secondAttribute="top" constant="10" id="TPL-fF-wWo"/>
+                            <constraint firstItem="Xeu-ha-Ed5" firstAttribute="leading" secondItem="YRa-cE-k0m" secondAttribute="leading" id="sn3-Mp-GkS"/>
+                            <constraint firstItem="eRf-12-qAZ" firstAttribute="top" secondItem="YRa-cE-k0m" secondAttribute="top" priority="250" constant="10" id="tat-Se-hf8"/>
+                            <constraint firstItem="Xeu-ha-Ed5" firstAttribute="bottom" secondItem="YRa-cE-k0m" secondAttribute="bottom" id="wHQ-a5-NO3"/>
+                            <constraint firstItem="kQp-oC-AhL" firstAttribute="top" secondItem="YRa-cE-k0m" secondAttribute="top" constant="50" id="wYN-KO-5t6"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Webbrowser" id="0y3-0o-iJQ"/>
                     <connections>
